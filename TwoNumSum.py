@@ -14,6 +14,7 @@ def twosum1(nums, target):
     for j in range(i+1, len(nums)):
       if nums[i] + nums[j] == target:
         return [nums[i], nums[j]]
+  return []
       
 
 #hash table
@@ -25,6 +26,7 @@ def twosum2(nums, target):
       return [nums[i], expected_value]
     else:
       dict[nums[i]] = True
+  return []
 
 
 #sort and two pointers
@@ -35,11 +37,12 @@ def twosum3(nums, target):
   while(left < right):
     sum = nums[left] + nums[right]
     if(sum == target):
-      return [nums[left], nums[right]]
+     return [nums[left], nums[right]]
     elif(sum < target):
       left += 1
     else:
       right -= 1
+  return []
 
 
 
